@@ -88,7 +88,7 @@ git pull origin master
 Create a database named 'test' with a table called 'users' that has three text columns: id, name, and email by referring to this website:
 http://webvaultwiki.com.au/Create-Mysql-Database-User-Phpmyadmin.ashx
 
-Create a user with the username 'test' and password 'password', then give the user full access to the 'users' table in the 'test' database.
+Create a user with the username 'test' and password 'password', then give the user full access to the 'users' table in the 'test' database
 
 Finally, reboot and visit the ip address of the machine
 ```sh
