@@ -90,8 +90,6 @@ http://webvaultwiki.com.au/Create-Mysql-Database-User-Phpmyadmin.ashx
 
 Create a user with the username 'test' and password 'password', then give the user full access to the 'users' table in the 'test' database.
 
-&nbsp;
-
 Finally, reboot and visit the ip address of the machine
 ```sh
 sudo reboot
