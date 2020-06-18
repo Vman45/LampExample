@@ -20,6 +20,18 @@ Install php
 ```sh
 sudo apt install php libapache2-mod-php -y
 ```
+Install MySQL
+```sh
+sudo apt-get install mariadb-server mariadb-client php-mysql -y
+```
+Install phpMyAdmin
+```sh
+sudo apt-get install phpmyadmin -y
+```
+Reboot
+```sh
+sudo reboot
+```
 
 ## Setup
 Navigate to apache2 web directory
