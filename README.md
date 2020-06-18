@@ -8,6 +8,10 @@ Update packages
 ```sh
 sudo apt update
 ```
+Upgrade packages
+```sh
+sudo apt-get upgrade -y
+```
 Install apache2 package
 ```sh
 sudo apt install apache2 -y
