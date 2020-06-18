@@ -32,6 +32,18 @@ Reboot
 ```sh
 sudo reboot
 ```
+Add phpMyAdmin to apache configuration
+```sh
+sudo nano /etc/apache2/apache2.conf
+```
+Add the following line to the end of the file
+```sh
+Include /etc/phpmyadmin/apache.conf
+```
+Reboot again
+```sh
+sudo reboot
+```
 
 ## Setup
 Navigate to apache2 web directory
