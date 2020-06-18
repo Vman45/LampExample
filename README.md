@@ -85,7 +85,16 @@ Pull the code
 ```sh
 git pull origin master
 ```
+Create a database named 'test' with a table called 'users' that has three text columns: id, name, and email by referring to this website:
+http://webvaultwiki.com.au/Create-Mysql-Database-User-Phpmyadmin.ashx
+
+&nbsp;
+
+Finally, reboot again
+```sh
+sudo reboot
+```
 
 ## Security
-Follow this guide to increase the security of the server (make sure port 80 is open): 
+Follow this guide to increase the security of the server (make sure port 80 is open):
 https://www.raspberrypi.org/documentation/configuration/security.md
