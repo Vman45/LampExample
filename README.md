@@ -24,7 +24,7 @@ Install MySQL
 ```sh
 sudo apt-get install mariadb-server mariadb-client php-mysql -y
 ```
-Install phpMyAdmin (select apache2 server)
+Install phpMyAdmin (select apache2 server, say yes, and enter a password)
 ```sh
 sudo apt-get install phpmyadmin -y
 ```
