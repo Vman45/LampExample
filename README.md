@@ -59,6 +59,19 @@ CREATE USER 'root'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
 ```
 
+## Fixing phpMyAdmin Error (optional, but recommended)
+Go to line 613 of the sql.lib.php file
+```sh
+sudo nano +613 /usr/share/phpmyadmin/libraries/sql.lib.php
+```
+Replace
+```sh
+|| (count($analyzed_sql_results['select_expr'] == 1)
+```
+With
+```sh
+|| ((count($analyzed_sql_results['select_expr']) == 1)
+```
 
 ## Setup
 Navigate to apache2 web directory
