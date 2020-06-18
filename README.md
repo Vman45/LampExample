@@ -44,6 +44,21 @@ Reboot again
 ```sh
 sudo reboot
 ```
+Change root user for phpMyAdmin
+```sh
+sudo mysql --user=root
+```
+Change root user for phpMyAdmin
+```sh
+sudo mysql --user=root
+```
+Replace 'password' with the password you want
+```sh
+DROP USER 'root'@'localhost';
+CREATE USER 'root'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
+```
+
 
 ## Setup
 Navigate to apache2 web directory
