@@ -1,4 +1,7 @@
 <html>
+  <head>
+    <title>LAMP Stack</title>
+  </head>
   <body>
     <h1>LAMP Stack Example</h1>
 
