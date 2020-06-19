@@ -33,7 +33,7 @@
         </div>
 
         <div class="form-group row">
-          <div class="offset-sm-2 col-sm-10">
+          <div class="offset-sm-1 col-sm-10">
             <input type="submit" value="Create User" class="btn btn-primary"/>
           </div>
         </div>
@@ -52,7 +52,7 @@
         </div>
 
         <div class="form-group row">
-          <div class="offset-sm-2 col-sm-10">
+          <div class="offset-sm-1 col-sm-10">
             <input type="submit" value="Delete User" class="btn btn-primary">
           </div>
         </div>
