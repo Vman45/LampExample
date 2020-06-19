@@ -14,8 +14,15 @@ class DAO {
     $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
   }
 
+  public function getConnectionStatus() {
+    if ($this->conn->connect_error) {
+      die("Connection failed: " . $this->conn->connect_error);
+    }
+    echo "<p> Connected successfully to database! </p>";
+  }
+
   public function createUser($name, $email) {
-    $sql = "INSERT INTO users (id, name, email) VALUES ('thisid', '$name', '$email')";
+    $sql = "INSERT INTO users (id, name, email) VALUES (uniqid(), '$name', '$email')";
 
     if ($this->conn->query($sql) === TRUE) {
       echo "New record created successfully";
@@ -37,13 +44,6 @@ class DAO {
       echo "</tr>";
     }
     echo "</table>";
-  }
-
-  public function getConnectionStatus() {
-    if ($this->conn->connect_error) {
-      die("Connection failed: " . $this->conn->connect_error);
-    }
-    echo "<p> Connected successfully to database! </p>";
   }
 
   public function closeConnection() {
