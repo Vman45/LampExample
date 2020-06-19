@@ -15,19 +15,28 @@ class DAO {
     $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
   }
 
-  function displayUsers() {
+  public function displayUsers() {
     $sql = "SELECT * FROM users";
     $result = mysqli_query($this->conn, $sql);
     echo "<br>";
     echo "<table border='1'>";
     while ($row = mysqli_fetch_assoc($result)) {
-        echo "<tr>";
-        foreach ($row as $field => $value) {
-            echo "<td>" . $value . "</td>";
-        }
-        echo "</tr>";
+      echo "<tr>";
+      foreach ($row as $field => $value) {
+        echo "<td>" . $value . "</td>";
+      }
+      echo "</tr>";
     }
     echo "</table>";
   }
+
+  public function getConnectionStatus() {
+    if ($this->conn->connect_error) {
+      die("Connection failed: " . $this->conn->connect_error);
+    }
+    echo "<p> Connected successfully to database! </p>";
+  }
+
+
 }
 ?>
