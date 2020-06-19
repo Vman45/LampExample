@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dao->deleteUser($id);
   }
   else {
-    echo "Fields cannot be empty!";
+    echo "<div>Fields cannot be empty!</div>";
   }
 }
 

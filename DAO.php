@@ -14,13 +14,6 @@ class DAO {
     $this->createConnection();
   }
 
-  public function getConnectionStatus() {
-    if ($this->conn->connect_error) {
-      die("Connection Failed: " . $this->conn->connect_error);
-    }
-    echo "<p> Connected to Database! </p>";
-  }
-
   public function createUser($name, $email) {
     $sql = "SELECT id FROM users WHERE name='$name'";
     $result = mysqli_query($this->conn, $sql);
@@ -31,14 +24,14 @@ class DAO {
       $sql = "INSERT INTO users (id, name, email) VALUES ('$id', '$name', '$email')";
 
       if ($this->conn->query($sql) === TRUE) {
-        echo "New user created successfully";
+        echo "<div>New user created successfully</div>";
       }
       else {
-        echo "Error: " . $sql . "<br>" . $this->conn->error;
+        echo "<div>Error: " . $sql . $this->conn->error . "</div>";
       }
     }
     else {
-      echo 'user already exists';
+      echo '<div>Error: user already exists </div>';
     }
   }
 
@@ -50,14 +43,14 @@ class DAO {
       $sql = "DELETE FROM users WHERE id='$id'";
 
       if ($this->conn->query($sql) === TRUE) {
-        echo "User deleted successfully";
+        echo "<div>User deleted successfully</div>";
       }
       else {
-        echo "Error: " . $sql . "<br>" . $this->conn->error;
+        echo "<div>Error: " . $sql . $this->conn->error . "</div>";
       }
     }
     else {
-      echo 'user does not exist';
+      echo '<div>Error: user does not exist</div>';
     }
   }
 
