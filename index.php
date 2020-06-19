@@ -1,8 +1,8 @@
 <html>
   <body>
-
-    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
       Name: <input type="text" name="fname">
+      Email: <input type="text" name="femail">
       <input type="submit">
     </form>
 

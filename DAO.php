@@ -6,13 +6,16 @@ class DAO {
   private $dbname;
   private $conn;
 
-  public function __construct()
-  {
+  public function __construct() {
     $this->servername = "localhost";
     $this->username = "test";
     $this->password = "password";
     $this->dbname = "test";
     $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+  }
+
+  public function createUser($name, $email) {
+
   }
 
   public function displayUsers() {
