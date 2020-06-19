@@ -25,7 +25,7 @@
         <div class="form-group row">
           <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
           <div class="col-sm-10">
-            <input class="form-control" id="inputEmail" type="email" name="femail">
+            <input class="form-control" id="inputEmail" placeholder="Email" type="email" name="femail">
           </div>
         </div>
 
@@ -44,7 +44,7 @@
         <div class="form-group row">
           <label for="inputID" class="col-sm-2 col-form-label">ID</label>
           <div class="col-sm-10">
-            <input class="form-control" id="inputID" type="text" name="fid">
+            <input class="form-control" id="inputID" placeholder="ID" type="text" name="fid">
           </div>
         </div>
 
