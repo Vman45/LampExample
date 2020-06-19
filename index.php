@@ -1,6 +1,8 @@
 <html>
   <body>
-    <h1>Create User</h1>
+    <h1>Lamp Example</h1>
+
+    <h2>Create User</h2>
 
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
       Name: <input type="text" name="fname">
