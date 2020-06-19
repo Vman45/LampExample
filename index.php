@@ -12,9 +12,9 @@
 
     <div class="container">
 
-      <h1>LAMP Stack Example</h1>
+      <h1 class="text-center">LAMP Stack Example</h1>
 
-      <h2>Create User</h2>
+      <h2 class="text-center">Create User</h2>
 
       <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
@@ -40,7 +40,7 @@
 
       </form>
 
-      <h2>Delete User</h2>
+      <h2 class="text-center">Delete User</h2>
 
       <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 

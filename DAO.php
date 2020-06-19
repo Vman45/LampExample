@@ -58,7 +58,7 @@ class DAO {
   public function displayUsers() {
     $sql = "SELECT * FROM users";
     $result = mysqli_query($this->conn, $sql);
-    echo "<h2> Table of Users </h2>";
+    echo "<h2 class="text-center"> Table of Users </h2>";
     echo "<table border='1'>";
     echo "<tr> <th>ID</th> <th>NAME</th> <th>EMAIL</th> </tr>";
     while ($row = mysqli_fetch_assoc($result)) {
