@@ -18,7 +18,7 @@ class DAO {
     $this->createConnection();
 
     if ($this->conn->connect_error) {
-      die("Connection failed: " . $this->conn->connect_error);
+      die("Connection Failed: " . $this->conn->connect_error);
     }
     echo "<p> Connected to Database! </p>";
 
