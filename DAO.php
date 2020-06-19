@@ -28,29 +28,23 @@ class DAO {
   public function createUser($id, $name, $email) {
     $this->createConnection();
 
-    $sql = "INSERT INTO users (id, name, email) VALUES ('$id', '$name', '$email')";
-
-    if ($this->conn->query($sql) === TRUE) {
-      echo "New record created successfully";
-    } else {
-      echo "Error: " . $sql . "<br>" . $this->conn->error;
-    }
-
-    $this->closeConnection();
-  }
-
-  public function userWithNameExists($name) {
-    $this->createConnection();
-
     $sql = "SELECT id FROM users WHERE name='$name'";
     $result = mysqli_query($this->conn, $sql);
-    if($result->num_rows == 0) {
-      echo 'user does not exist';
-    } else {
-      echo 'user exists';
-    }
 
-    $this->closeConnection();
+    if($result->num_rows == 0) {
+      $sql = "INSERT INTO users (id, name, email) VALUES ('$id', '$name', '$email')";
+
+      if ($this->conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+        $this->closeConnection();
+      } else {
+        echo "Error: " . $sql . "<br>" . $this->conn->error;
+        $this->closeConnection();
+      }
+    } else {
+      echo 'user already exists';
+      $this->closeConnection();
+    }
   }
 
   public function displayUsers() {
