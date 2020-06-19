@@ -6,10 +6,12 @@ $dao->displayUsers();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = $_POST['fname'];
-  if (empty($name)) {
-    echo "Name is empty";
+  $email = $_POST['femail'];
+  if (empty($name) || empty($email)) {
+    echo "Fields cannot be empty!";
   } else {
     echo $name;
+    echo $email;
   }
 }
 
