@@ -73,11 +73,11 @@ class DAO {
     closeConnection();
   }
 
-  private function createConnection() {
+  public function createConnection() {
     $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
   }
 
-  private function closeConnection() {
+  public function closeConnection() {
     $this->conn->close();
   }
 
