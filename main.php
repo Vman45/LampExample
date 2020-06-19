@@ -2,6 +2,8 @@
 require 'DAO.php';
 $dao = new DAO();
 
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = $_POST['fname'];
   $email = $_POST['femail'];
