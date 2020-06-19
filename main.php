@@ -3,6 +3,8 @@ require 'DAO.php';
 $dao = new DAO();
 $dao->getConnectionStatus();
 
+$connectionStatus = "connected to database"
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = $_POST['fname'];
   $email = $_POST['femail'];

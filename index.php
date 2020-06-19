@@ -2,6 +2,8 @@
   <body>
     <h1>LAMP Stack Example</h1>
 
+    <?php echo $connectionStatus ?>
+
     <h2>Create User</h2>
 
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
