@@ -1,6 +1,6 @@
 <html>
   <body>
-    <h1>Lamp Example</h1>
+    <h1>LAMP Stack Example</h1>
 
     <h2>Create User</h2>
 
