@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       echo "Fields cannot be empty!";
     }
     else  {
-      echo "delete user";
+      $dao->deleteUser($id);
     }
   }
   else {
