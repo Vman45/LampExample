@@ -12,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     echo $name;
     echo $email;
+    createUser($name, $email);
   }
 }
 
