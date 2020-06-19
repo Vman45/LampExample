@@ -22,7 +22,7 @@ class DAO {
   }
 
   public function createUser($id, $name, $email) {
-    $sql = "INSERT INTO users (id, name, email) VALUES ('$id', '$name', '$email')";
+    $sql = "INSERT INTO users (id, name, email) VALUES ($id, '$name', '$email')";
 
     if ($this->conn->query($sql) === TRUE) {
       echo "New record created successfully";
