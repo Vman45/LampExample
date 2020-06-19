@@ -20,7 +20,7 @@ class DAO {
     if ($this->conn->connect_error) {
       die("Connection failed: " . $this->conn->connect_error);
     }
-    echo "<p> Connected successfully to database! </p>";
+    echo "<p> Connected to Database! </p>";
 
     $this->closeConnection();
   }
@@ -33,11 +33,11 @@ class DAO {
 
     if($result->num_rows == 0) {
       $id = md5(uniqid(rand(), true));
-      
+
       $sql = "INSERT INTO users (id, name, email) VALUES ('$id', '$name', '$email')";
 
       if ($this->conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+        echo "New user created successfully";
         $this->closeConnection();
       } else {
         echo "Error: " . $sql . "<br>" . $this->conn->error;
