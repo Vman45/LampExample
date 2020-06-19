@@ -1,4 +1,5 @@
 <?php
+// DATA ACCESOR OBJECT
 class DAO {
   private $servername;
   private $username;

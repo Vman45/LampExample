@@ -1,4 +1,5 @@
 <?php
+// MAIN CODE
 require 'DAO.php';
 $dao = new DAO();
 
