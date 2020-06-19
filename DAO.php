@@ -45,9 +45,9 @@ class DAO {
     $sql = "SELECT id FROM users WHERE name='$name'";
     $result = mysqli_query($this->conn, $sql);
     if($result->num_rows == 0) {
-      echo 'user does not exist'
+      echo 'user does not exist';
     } else {
-      echo 'user exists'
+      echo 'user exists';
     }
 
     $this->closeConnection();
