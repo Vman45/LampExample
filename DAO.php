@@ -11,17 +11,23 @@ class DAO {
     $this->username = "test";
     $this->password = "password";
     $this->dbname = "test";
-    $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+    createConnection();
   }
 
   public function getConnectionStatus() {
+    createConnection();
+
     if ($this->conn->connect_error) {
       die("Connection failed: " . $this->conn->connect_error);
     }
     echo "<p> Connected successfully to database! </p>";
+
+    closeConnection();
   }
 
   public function createUser($id, $name, $email) {
+    createConnection();
+
     $sql = "INSERT INTO users (id, name, email) VALUES ('$id', '$name', '$email')";
 
     if ($this->conn->query($sql) === TRUE) {
@@ -29,9 +35,27 @@ class DAO {
     } else {
       echo "Error: " . $sql . "<br>" . $this->conn->error;
     }
+
+    closeConnection();
+  }
+
+  public function userWithNameExists($name) {
+    createConnection();
+
+    $sql = "SELECT id FROM users WHERE name='$name'";
+    $result = mysqli_query($this->conn, $sql);
+    if($result->num_rows == 0) {
+      echo 'user does not exist'
+    } else {
+      echo 'user exists'
+    }
+
+    closeConnection();
   }
 
   public function displayUsers() {
+    createConnection();
+
     $sql = "SELECT * FROM users";
     $result = mysqli_query($this->conn, $sql);
     echo "<br>";
@@ -45,9 +69,15 @@ class DAO {
       echo "</tr>";
     }
     echo "</table>";
+
+    closeConnection();
   }
 
-  public function closeConnection() {
+  private function createConnection() {
+    $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+  }
+
+  private function closeConnection() {
     $this->conn->close();
   }
 
