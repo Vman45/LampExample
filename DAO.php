@@ -11,22 +11,22 @@ class DAO {
     $this->username = "test";
     $this->password = "password";
     $this->dbname = "test";
-    createConnection();
+    $this->createConnection();
   }
 
   public function getConnectionStatus() {
-    createConnection();
+    $this->createConnection();
 
     if ($this->conn->connect_error) {
       die("Connection failed: " . $this->conn->connect_error);
     }
     echo "<p> Connected successfully to database! </p>";
 
-    closeConnection();
+    $this->closeConnection();
   }
 
   public function createUser($id, $name, $email) {
-    createConnection();
+    $this->createConnection();
 
     $sql = "INSERT INTO users (id, name, email) VALUES ('$id', '$name', '$email')";
 
@@ -36,11 +36,11 @@ class DAO {
       echo "Error: " . $sql . "<br>" . $this->conn->error;
     }
 
-    closeConnection();
+    $this->closeConnection();
   }
 
   public function userWithNameExists($name) {
-    createConnection();
+    $this->createConnection();
 
     $sql = "SELECT id FROM users WHERE name='$name'";
     $result = mysqli_query($this->conn, $sql);
@@ -50,11 +50,11 @@ class DAO {
       echo 'user exists'
     }
 
-    closeConnection();
+    $this->closeConnection();
   }
 
   public function displayUsers() {
-    createConnection();
+    $this->createConnection();
 
     $sql = "SELECT * FROM users";
     $result = mysqli_query($this->conn, $sql);
@@ -70,7 +70,7 @@ class DAO {
     }
     echo "</table>";
 
-    closeConnection();
+    $this->closeConnection();
   }
 
   public function createConnection() {
