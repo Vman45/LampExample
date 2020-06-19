@@ -12,7 +12,7 @@
 
     <div class="container">
 
-      <h1 class="text-center">LAMP Stack Example</h1>
+      <h1 class="text-center display-4 font-italic">LAMP Stack Example</h1>
 
       <h2 class="text-center">Create User</h2>
 
