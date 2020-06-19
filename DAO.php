@@ -12,12 +12,13 @@ class DAO {
     $this->username = "test";
     $this->password = "password";
     $this->dbname = "test";
-    $this->conn = new mysqli($servername, $username, $password, $dbname);
   }
 
   function displayUsers() {
+    $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+
     $sql = "SELECT * FROM users";
-    $result = mysqli_query($this->conn, $sql);
+    $result = mysqli_query($conn, $sql);
     echo "<br>";
     echo "<table border='1'>";
     while ($row = mysqli_fetch_assoc($result)) {
