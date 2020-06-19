@@ -11,15 +11,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully to database!";
-
-// $sql = "INSERT INTO users (id, name, email) VALUES ('id', 'name', 'test@example.com')";
-//
-// if ($conn->query($sql) === TRUE) {
-//   echo "New record created successfully";
-// } else {
-//   echo "Error: " . $sql . "<br>" . $conn->error;
-// }
+echo "<p> Connected successfully to database! </p>";
 
 $sql = "SELECT * FROM users";
 $result = mysqli_query($conn, $sql); // First parameter is just return of "mysqli_connect()" function
@@ -33,6 +25,15 @@ while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary
     echo "</tr>";
 }
 echo "</table>";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = $_POST['fname'];
+  if (empty($name)) {
+    echo "Name is empty";
+  } else {
+    echo $name;
+  }
+}
 
 $conn->close();
 
