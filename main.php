@@ -2,11 +2,6 @@
 require 'DAO.php';
 $dao = new DAO();
 
-
-function getConnectionStatus() {
-  echo "Connected to Database!"
-}
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = $_POST['fname'];
   $email = $_POST['femail'];
@@ -24,4 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dao->createUser($name, $email);
   }
 }
+
+$dao->displayUsers();
 ?>
