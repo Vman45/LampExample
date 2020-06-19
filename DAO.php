@@ -20,7 +20,7 @@ class DAO {
     if ($this->conn->query($sql) === TRUE) {
       echo "New record created successfully";
     } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
+      echo "Error: " . $sql . "<br>" . $this->conn->error;
     }
   }
 
