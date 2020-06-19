@@ -2,6 +2,8 @@
   <body>
     <h1>LAMP Stack Example</h1>
 
+    <?php require 'connectionStatus.php';?>
+
 
     <h2>Create User</h2>
 
@@ -19,6 +21,8 @@
     </form>
 
     <?php require 'table.php';?>
+
+
 
 
   </body>
