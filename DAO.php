@@ -11,11 +11,11 @@ class DAO {
     $this->username = "test";
     $this->password = "password";
     $this->dbname = "test";
-    $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+    $this->createConnection();
   }
 
   public function getConnectionStatus() {
-    $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+    $this->createConnection();
 
     if ($this->conn->connect_error) {
       die("Connection failed: " . $this->conn->connect_error);
@@ -26,7 +26,7 @@ class DAO {
   }
 
   public function createUser($id, $name, $email) {
-    $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+    $this->createConnection();
 
     $sql = "INSERT INTO users (id, name, email) VALUES ('$id', '$name', '$email')";
 
@@ -40,7 +40,7 @@ class DAO {
   }
 
   public function userWithNameExists($name) {
-    $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+    $this->createConnection();
 
     $sql = "SELECT id FROM users WHERE name='$name'";
     $result = mysqli_query($this->conn, $sql);
@@ -54,7 +54,7 @@ class DAO {
   }
 
   public function displayUsers() {
-    $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+    $this->createConnection();
 
     $sql = "SELECT * FROM users";
     $result = mysqli_query($this->conn, $sql);
@@ -71,6 +71,10 @@ class DAO {
     echo "</table>";
 
     $this->closeConnection();
+  }
+
+  public function createConnection() {
+    $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
   }
 
   public function closeConnection() {
