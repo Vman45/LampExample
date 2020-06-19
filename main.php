@@ -12,8 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     echo $name;
     echo $email;
-    $id = 'hello';
-    $dao->createUser($name, $email);
+    $id = md5(uniqid(rand(), true));
+    $dao->createUser($id, $name, $email);
   }
 }
 
