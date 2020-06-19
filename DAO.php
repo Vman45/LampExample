@@ -33,7 +33,7 @@
 // $dao = new DAO()
 // $dao.displayUsers()
 
-class Fruit {
+class DAO {
   // Properties
   public $name;
   public $color;
@@ -41,14 +41,15 @@ class Fruit {
   // Methods
   function set_name($name) {
     $this->name = $name;
+    echo $name;
   }
   function get_name() {
     return $this->name;
   }
 }
 
-$apple = new Fruit();
-$banana = new Fruit();
+$apple = new DAO();
+$banana = new DAO();
 $apple->set_name('Apple');
 $banana->set_name('Banana');
 
