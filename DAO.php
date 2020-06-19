@@ -1,15 +1,15 @@
 <?php
 class DAO {
-  $servername = "localhost";
-  $username = "test";
-  $password = "password";
-  $dbname = "test";
+  public $servername = "localhost";
+  public $username = "test";
+  public $password = "password";
+  public $dbname = "test";
 
-  $conn = new mysqli($servername, $username, $password, $dbname);
+  public $conn = new mysqli($servername, $username, $password, $dbname);
 
   function displayUsers() {
     $sql = "SELECT * FROM users";
-    $result = mysqli_query($this->conn, $sql);
+    $result = mysqli_query($conn, $sql);
     echo "<br>";
     echo "<table border='1'>";
     while ($row = mysqli_fetch_assoc($result)) {
