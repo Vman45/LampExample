@@ -2,7 +2,7 @@
 require 'DAO.php';
 $dao = new DAO();
 
-
+$connectionStatus = "Connected to Database!"
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = $_POST['fname'];
