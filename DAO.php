@@ -15,19 +15,13 @@ class DAO {
   }
 
   public function getConnectionStatus() {
-    $this->createConnection();
-
     if ($this->conn->connect_error) {
       die("Connection Failed: " . $this->conn->connect_error);
     }
     echo "<p> Connected to Database! </p>";
-
-    $this->closeConnection();
   }
 
   public function createUser($name, $email) {
-    $this->createConnection();
-
     $sql = "SELECT id FROM users WHERE name='$name'";
     $result = mysqli_query($this->conn, $sql);
 
@@ -38,22 +32,17 @@ class DAO {
 
       if ($this->conn->query($sql) === TRUE) {
         echo "New user created successfully";
-        $this->closeConnection();
       }
       else {
         echo "Error: " . $sql . "<br>" . $this->conn->error;
-        $this->closeConnection();
       }
     }
     else {
       echo 'user already exists';
-      $this->closeConnection();
     }
   }
 
   public function deleteUser($id) {
-    $this->createConnection();
-
     $sql = "SELECT id FROM users WHERE id='$id'";
     $result = mysqli_query($this->conn, $sql);
 
@@ -62,22 +51,17 @@ class DAO {
 
       if ($this->conn->query($sql) === TRUE) {
         echo "User deleted successfully";
-        $this->closeConnection();
       }
       else {
         echo "Error: " . $sql . "<br>" . $this->conn->error;
-        $this->closeConnection();
       }
     }
     else {
       echo 'user does not exist';
-      $this->closeConnection();
     }
   }
 
   public function displayUsers() {
-    $this->createConnection();
-
     $sql = "SELECT * FROM users";
     $result = mysqli_query($this->conn, $sql);
     echo "<h2> Table of Users </h2>";
@@ -91,8 +75,6 @@ class DAO {
       echo "</tr>";
     }
     echo "</table>";
-
-    $this->closeConnection();
   }
 
   public function createConnection() {
