@@ -39,12 +39,38 @@ class DAO {
       if ($this->conn->query($sql) === TRUE) {
         echo "New user created successfully";
         $this->closeConnection();
-      } else {
+      }
+      else {
         echo "Error: " . $sql . "<br>" . $this->conn->error;
         $this->closeConnection();
       }
-    } else {
+    }
+    else {
       echo 'user already exists';
+      $this->closeConnection();
+    }
+  }
+
+  public function deleteUser($id) {
+    $this->createConnection();
+
+    $sql = "SELECT id FROM users WHERE id='$id'";
+    $result = mysqli_query($this->conn, $sql);
+
+    if($result->num_rows != 0) {
+      $sql = "DELETE FROM users WHERE id='$id'";
+
+      if ($this->conn->query($sql) === TRUE) {
+        echo "User deleted successfully";
+        $this->closeConnection();
+      }
+      else {
+        echo "Error: " . $sql . "<br>" . $this->conn->error;
+        $this->closeConnection();
+      }
+    }
+    else {
+      echo 'user does not exist';
       $this->closeConnection();
     }
   }
