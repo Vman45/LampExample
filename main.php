@@ -1,7 +1,7 @@
 <?php
 require 'DAO.php';
 $dao = new DAO();
-$dao.displayUsers();
+$dao->displayUsers();
 
 // $servername = "localhost";
 // $username = "test";
