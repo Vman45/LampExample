@@ -60,7 +60,8 @@ class DAO {
     $result = mysqli_query($this->conn, $sql);
     echo "<h2 class='text-center'> Table of Users </h2>";
     echo "<table class='table'>";
-    echo "<tr> <th>ID</th> <th>NAME</th> <th>EMAIL</th> </tr>";
+    echo "<thead class='thead-dark'> <tr> <th>ID</th> <th>NAME</th> <th>EMAIL</th> </tr> </thead>";
+    echo "<tbody>";
     while ($row = mysqli_fetch_assoc($result)) {
       echo "<tr>";
       foreach ($row as $field => $value) {
@@ -68,6 +69,7 @@ class DAO {
       }
       echo "</tr>";
     }
+    echo "</tbody>";
     echo "</table>";
   }
 
