@@ -28,6 +28,9 @@ class DAO {
     }
     echo "</table>";
   }
-
 }
+
+$dao = new DAO()
+$dao.displayUsers()
+
 ?>
