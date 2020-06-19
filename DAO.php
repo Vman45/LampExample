@@ -6,7 +6,7 @@ class DAO {
   public $dbname;
   public $conn;
 
-  public function __construct(int $id, ?string $name)
+  public function __construct()
   {
     $this->servername = "localhost";
     $this->username = "test";
