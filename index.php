@@ -11,7 +11,7 @@
 
     <h2>Create User</h2>
 
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
       <div class="form-group row">
         <label for="inputName" class="col-sm-2 col-form-label">Name</label>
         <input class="form-control" id="inputName" placeholder="Name" type="text" name="fname">
