@@ -2,9 +2,10 @@
 $servername = "localhost";
 $username = "test";
 $password = "password";
+$dbname = "test";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
@@ -20,7 +21,7 @@ echo "Connected successfully to database!";
 //   echo "Error: " . $sql . "<br>" . $conn->error;
 // }
 
-$sql = "SELECT * FROM MY_TABLE";
+$sql = "SELECT * FROM users";
 $result = mysqli_query($conn, $sql); // First parameter is just return of "mysqli_connect()" function
 echo "<br>";
 echo "<table border='1'>";
