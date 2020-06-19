@@ -4,7 +4,7 @@
 
     <h1>LAMP Stack Example</h1>
 
-    <?php echo $connectionStatus; ?>
+    <?php echo getConnectionStatus(); ?>
 
     <h2>Create User</h2>
 
