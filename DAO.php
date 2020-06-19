@@ -25,14 +25,14 @@ class DAO {
       $sql = "INSERT INTO users (id, name, email) VALUES ('$id', '$name', '$email')";
 
       if ($this->conn->query($sql) === TRUE) {
-        echo "<div>New user created successfully</div>";
+        echo "<div class='success'>Success: new user created</div>";
       }
       else {
         echo "<div>Error: " . $sql . $this->conn->error . "</div>";
       }
     }
     else {
-      echo '<div>Error: user already exists </div>';
+      echo "<div class='error'>Error: user already exists </div>";
     }
   }
 
@@ -44,14 +44,14 @@ class DAO {
       $sql = "DELETE FROM users WHERE id='$id'";
 
       if ($this->conn->query($sql) === TRUE) {
-        echo "<div>User deleted successfully</div>";
+        echo "<div class='success'>Success: user deleted successfully</div>";
       }
       else {
-        echo "<div>Error: " . $sql . $this->conn->error . "</div>";
+        echo "<div class='error'>Error: " . $sql . $this->conn->error . "</div>";
       }
     }
     else {
-      echo '<div>Error: user does not exist</div>';
+      echo "<div class='error'>Error: user does not exist</div>";
     }
   }
 

@@ -2,3 +2,11 @@ h1 {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   margin: 1rem;
 }
+
+.error {
+  color: red;
+}
+
+.success  {
+  color: green;
+}
