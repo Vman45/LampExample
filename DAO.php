@@ -36,7 +36,7 @@ class DAO {
     $result = mysqli_query($this->conn, $sql);
     echo "<br>";
     echo "<table border='1'>";
-    echo "<tr> <th>id</th> <th>name</th> <th>email</th> </tr>"
+    echo "<tr> <td>id</td> <td>name</td> <td>email</td> </tr>"
     while ($row = mysqli_fetch_assoc($result)) {
       echo "<tr>";
       foreach ($row as $field => $value) {
