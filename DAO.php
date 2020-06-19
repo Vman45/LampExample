@@ -21,8 +21,8 @@ class DAO {
     echo "<p> Connected successfully to database! </p>";
   }
 
-  public function createUser($name, $email) {
-    $sql = "INSERT INTO users (id, name, email) VALUES (uniqid(), '$name', '$email')";
+  public function createUser($id, $name, $email) {
+    $sql = "INSERT INTO users (id, name, email) VALUES ('$id', '$name', '$email')";
 
     if ($this->conn->query($sql) === TRUE) {
       echo "New record created successfully";
