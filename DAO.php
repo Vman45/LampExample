@@ -31,7 +31,7 @@ class DAO {
 }
 
 $dao = new DAO();
-$dao.displayUsers();
+$dao->displayUsers();
 
 // class DAO {
 //   // Properties
