@@ -20,10 +20,7 @@
       <input type="submit" value="Delete User">
     </form>
 
-    <?php require 'table.php';?>
-
-
-
+    <?php require 'main.php';?>
 
   </body>
 </html>
