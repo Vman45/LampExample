@@ -37,6 +37,10 @@ class DAO {
     echo "<p> Connected successfully to database! </p>";
   }
 
+  public function closeConnection() {
+    $this->conn->close();
+  }
+
 
 }
 ?>
