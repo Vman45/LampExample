@@ -59,7 +59,7 @@ class DAO {
     $sql = "SELECT * FROM users";
     $result = mysqli_query($this->conn, $sql);
     echo "<h2 class='text-center'> Table of Users </h2>";
-    echo "<table border='1'>";
+    echo "<table class='table'>";
     echo "<tr> <th>ID</th> <th>NAME</th> <th>EMAIL</th> </tr>";
     while ($row = mysqli_fetch_assoc($result)) {
       echo "<tr>";
