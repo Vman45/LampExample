@@ -20,20 +20,20 @@
 
         <div class="form-group row">
           <label for="inputName" class="col-sm-1 col-form-label">Name</label>
-          <div class="col-sm-10">
+          <div class="col-sm-11">
             <input class="form-control" id="inputName" placeholder="Full Name" type="text" name="fname">
           </div>
         </div>
 
         <div class="form-group row">
           <label for="inputEmail" class="col-sm-1 col-form-label">Email</label>
-          <div class="col-sm-10">
+          <div class="col-sm-11">
             <input class="form-control" id="inputEmail" placeholder="Email" type="email" name="femail">
           </div>
         </div>
 
         <div class="form-group row">
-          <div class="offset-sm-1 col-sm-10">
+          <div class="offset-sm-1 col-sm-11">
             <input type="submit" value="Create User" class="btn btn-primary"/>
           </div>
         </div>
@@ -46,13 +46,13 @@
 
         <div class="form-group row">
           <label for="inputID" class="col-sm-1 col-form-label">ID</label>
-          <div class="col-sm-10">
+          <div class="col-sm-11">
             <input class="form-control" id="inputID" placeholder="ID" type="text" name="fid">
           </div>
         </div>
 
         <div class="form-group row">
-          <div class="offset-sm-1 col-sm-10">
+          <div class="offset-sm-1 col-sm-11">
             <input type="submit" value="Delete User" class="btn btn-primary">
           </div>
         </div>
