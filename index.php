@@ -14,11 +14,25 @@
     <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
       <div class="form-group row">
         <label for="inputName" class="col-sm-2 col-form-label">Name</label>
-        <input class="form-control" id="inputName" placeholder="Name" type="text" name="fname">
+        <div class="col-sm-10">
+          <input class="form-control" id="inputName" placeholder="Full Name" type="text" name="fname">
+        </div>
       </div>
 
-      Email: <input type="text" name="femail">
-      <input type="submit" value="Create User">
+      <div class="form-group row">
+        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="inputEmail" type="email" name="femail">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="offset-sm-2 col-sm-10">
+          <input type="submit" value="Create User" class="btn btn-primary"/>
+
+        </div>
+      </div>
+
     </form>
 
     <h2>Delete User</h2>
