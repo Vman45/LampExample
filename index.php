@@ -9,31 +9,34 @@
 
     <h1>LAMP Stack Example</h1>
 
-    <h2>Create User</h2>
+    <div class="container">
+      <h2>Create User</h2>
 
-    <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-      <div class="form-group row">
-        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
-        <div class="col-sm-10">
-          <input class="form-control" id="inputName" placeholder="Full Name" type="text" name="fname">
+      <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <div class="form-group row">
+          <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-10">
+            <input class="form-control" id="inputName" placeholder="Full Name" type="text" name="fname">
+          </div>
         </div>
-      </div>
 
-      <div class="form-group row">
-        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-        <div class="col-sm-10">
-          <input class="form-control" id="inputEmail" type="email" name="femail">
+        <div class="form-group row">
+          <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input class="form-control" id="inputEmail" type="email" name="femail">
+          </div>
         </div>
-      </div>
 
-      <div class="form-group row">
-        <div class="offset-sm-2 col-sm-10">
-          <input type="submit" value="Create User" class="btn btn-primary"/>
+        <div class="form-group row">
+          <div class="offset-sm-2 col-sm-10">
+            <input type="submit" value="Create User" class="btn btn-primary"/>
 
+          </div>
         </div>
-      </div>
 
-    </form>
+      </form>
+    </div>
+
 
     <h2>Delete User</h2>
 
