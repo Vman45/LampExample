@@ -9,7 +9,7 @@ class DAO {
 
   function displayUsers() {
     $sql = "SELECT * FROM users";
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($this->conn, $sql);
     echo "<br>";
     echo "<table border='1'>";
     while ($row = mysqli_fetch_assoc($result)) {
