@@ -2,7 +2,6 @@
 require 'DAO.php';
 $dao = new DAO();
 $dao->getConnectionStatus();
-$dao->displayUsers();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = $_POST['fname'];
@@ -10,11 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($name) || empty($email)) {
     echo "Fields cannot be empty!";
   } else {
-    echo $name;
-    echo $email;
-    $id = md5(uniqid(rand(), true));
-    $dao->createUser($id, $name, $email);
+    $dao->createUser($name, $email);
   }
 }
+
+$dao->displayUsers();
 
 ?>

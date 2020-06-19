@@ -25,13 +25,15 @@ class DAO {
     $this->closeConnection();
   }
 
-  public function createUser($id, $name, $email) {
+  public function createUser($name, $email) {
     $this->createConnection();
 
     $sql = "SELECT id FROM users WHERE name='$name'";
     $result = mysqli_query($this->conn, $sql);
 
     if($result->num_rows == 0) {
+      $id = md5(uniqid(rand(), true));
+      
       $sql = "INSERT INTO users (id, name, email) VALUES ('$id', '$name', '$email')";
 
       if ($this->conn->query($sql) === TRUE) {
@@ -74,7 +76,5 @@ class DAO {
   public function closeConnection() {
     $this->conn->close();
   }
-
-
 }
 ?>
