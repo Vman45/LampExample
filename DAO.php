@@ -1,11 +1,19 @@
 <?php
 class DAO {
-  public $servername = "localhost";
-  public $username = "test";
-  public $password = "password";
-  public $dbname = "test";
+  public $servername;
+  public $username;
+  public $password;
+  public $dbname;
+  public $conn;
 
-  public $conn = new mysqli($servername, $username, $password, $dbname);
+  public function __construct(int $id, ?string $name)
+  {
+    $this->servername = "localhost";
+    $this->username = "test";
+    $this->password = "password";
+    $this->dbname = "test";
+    $this->conn = new mysqli($servername, $username, $password, $dbname);
+  }
 
   function displayUsers() {
     $sql = "SELECT * FROM users";
