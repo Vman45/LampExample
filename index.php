@@ -19,14 +19,14 @@
       <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
         <div class="form-group row">
-          <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+          <label for="inputName" class="col-sm-1 col-form-label">Name</label>
           <div class="col-sm-10">
             <input class="form-control" id="inputName" placeholder="Full Name" type="text" name="fname">
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+          <label for="inputEmail" class="col-sm-1 col-form-label">Email</label>
           <div class="col-sm-10">
             <input class="form-control" id="inputEmail" placeholder="Email" type="email" name="femail">
           </div>
@@ -45,7 +45,7 @@
       <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
         <div class="form-group row">
-          <label for="inputID" class="col-sm-2 col-form-label">ID</label>
+          <label for="inputID" class="col-sm-1 col-form-label">ID</label>
           <div class="col-sm-10">
             <input class="form-control" id="inputID" placeholder="ID" type="text" name="fid">
           </div>
