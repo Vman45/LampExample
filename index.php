@@ -1,10 +1,6 @@
 <html>
   <body>
-    <?php require 'main.php';?>
-
     <h1>LAMP Stack Example</h1>
-
-    <?php echo getConnectionStatus(); ?>
 
     <h2>Create User</h2>
 
@@ -20,6 +16,8 @@
       ID: <input type="text" name="fid">
       <input type="submit" value="Delete User">
     </form>
+
+    <?php require 'main.php';?>
 
   </body>
 </html>
